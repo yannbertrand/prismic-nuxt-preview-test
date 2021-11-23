@@ -1,8 +1,8 @@
 <template>
     <section>
         <h1>Home</h1>
-        <h2>{{ document.banner_title[0].text }}</h2>
-        <p>{{ document.banner_content[0].text }}</p>
+        <prismic-rich-text :field="document.banner_title"></prismic-rich-text>
+        <prismic-rich-text :field="document.banner_content"></prismic-rich-text>
     </section>
 </template>
 

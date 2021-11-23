@@ -1,5 +1,8 @@
 <template>
-  <Tutorial/>
+    <section>
+        <Home />
+        <Footer />
+    </section>
 </template>
 
 <script>

@@ -1,7 +1,6 @@
 <template>
     <section>
         <Home />
-        <Footer />
     </section>
 </template>
 

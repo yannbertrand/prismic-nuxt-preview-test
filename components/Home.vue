@@ -21,4 +21,16 @@ export default {
         this.document = documents.results[0]?.data?.body[0]?.primary
     }
 }
+/* export default {
+    async asyncData({app}) {
+        const documents = await app.$prismic.api.query(
+            app.$prismic.predicates.at('my.slices_page.uid', 'index-pix-site'),
+            { lang: 'fr-fr' }
+        )
+        console.log(documents)
+        return {
+            document: documents.results[0]?.data?.body[0]?.primary
+        }
+    }
+} */
 </script>

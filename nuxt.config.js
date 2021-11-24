@@ -4,7 +4,7 @@ const PRISMIC_APIS_HREF = {
     TEST: 'https://prismic-nuxt-preview-test.cdn.prismic.io/api/v2',
     PROD: 'https://pix-site.prismic.io/api/v2',
 }
-const PRISMIC_API_HREF = PRISMIC_APIS_HREF.PROD
+const PRISMIC_API_HREF = PRISMIC_APIS_HREF.TEST
 
 export default {
   generate: { routes: () => routes(PRISMIC_API_HREF) },
@@ -47,6 +47,8 @@ export default {
 
   prismic: {
     endpoint: PRISMIC_API_HREF,
+    linkResolver: '@/plugins/link-resolver',
+    htmlSerializer: '@/plugins/html-serializer',
     modern: true
   },
 

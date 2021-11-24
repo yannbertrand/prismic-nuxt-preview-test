@@ -14,10 +14,11 @@ export default {
     },
     async fetch() {
         const documents = await this.$prismic.api.query(
-            this.$prismic.predicates.at('document.type', 'main_ooter'),
-            { lang: 'en-us' }
+            this.$prismic.predicates.at('document.type', 'main_footer'),
+            { lang: 'fr-fr' }
         )
-        this.document = documents.results[0]?.data?.body[0]?.primary
+        const result = documents.results.find(r => r?.data?.footer_for === 'pix-site')
+        this.document = result.data?.body.find(b => b.slice_type === 'text')?.primary
     }
 }
 </script>

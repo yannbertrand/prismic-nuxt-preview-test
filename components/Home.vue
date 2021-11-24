@@ -16,7 +16,7 @@ export default {
     async fetch() {
         const documents = await this.$prismic.api.query(
             this.$prismic.predicates.at('my.slices_page.uid', 'index-pix-site'),
-            { lang: 'en-us' }
+            { lang: 'fr-fr' }
         )
         this.document = documents.results[0]?.data?.body[0]?.primary
     }

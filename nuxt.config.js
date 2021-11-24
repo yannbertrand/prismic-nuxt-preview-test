@@ -1,4 +1,14 @@
+import routes from './services/get-routes-to-generate'
+
+const PRISMIC_APIS_HREF = {
+    TEST: 'https://prismic-nuxt-preview-test.cdn.prismic.io/api/v2',
+    PROD: 'https://pix-site.prismic.io/api/v2',
+}
+const PRISMIC_API_HREF = PRISMIC_APIS_HREF.PROD
+
 export default {
+  generate: { routes: () => routes(PRISMIC_API_HREF) },
+
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -36,7 +46,7 @@ export default {
   ],
 
   prismic: {
-    endpoint: 'https://prismic-nuxt-preview-test.cdn.prismic.io/api/v2',
+    endpoint: PRISMIC_API_HREF,
     modern: true
   },
 

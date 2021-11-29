@@ -38,12 +38,19 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/prismic'
+    '@nuxtjs/prismic',
+    '@nuxt/image'
   ],
 
   prismic: {
     endpoint: PRISMIC_API_HREF,
     modern: true
+  },
+
+  image: {
+    domains: [
+      'images.prismic.io',
+    ]
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
